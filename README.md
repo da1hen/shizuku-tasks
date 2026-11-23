@@ -1,5 +1,7 @@
 # しずく
 
+[公開アプリ](https://shizuku-tasks.daihen.workers.dev/)
+
 開いた画面からメモを追加できる、モバイル向けのタスク管理Webアプリです。
 
 - クイックメモはログイン前も使えます。下書きと未ログイン時のタスクは、このブラウザのストレージに保存します。
@@ -48,7 +50,7 @@ npm run test:browser
 ## Cloudflareへ公開
 
 1. Cloudflareのアカウントに `npx wrangler login` でログインします。
-2. `npx wrangler d1 create shizuku-tasks` でD1を作り、`wrangler.jsonc` の `database_id` を返されたUUIDに更新します。
+2. 別のCloudflareアカウントに展開する場合は `npx wrangler d1 create shizuku-tasks` でD1を作り、`wrangler.jsonc` の `database_id` を返されたUUIDに更新します。
 3. `npx wrangler d1 migrations apply DB --remote` を実行し、`npm run deploy` で公開URLを取得します。AIバインディングは設定済みです。
 4. Google CloudでOAuth同意画面と「ウェブ アプリケーション」のOAuthクライアントを設定します。承認済みリダイレクトURIは `https://<公開先ホスト>/auth/google/callback` です。公開対象にあわせてGoogle側の公開ステータスも設定します。
 5. クライアントIDとシークレットを `npx wrangler secret put GOOGLE_CLIENT_ID` と `npx wrangler secret put GOOGLE_CLIENT_SECRET` で設定します。カスタムドメインを使う場合はGoogle側のリダイレクトURIと `PUBLIC_ORIGIN` を同じ公開オリジンにそろえます。

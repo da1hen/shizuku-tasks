@@ -71,6 +71,11 @@ textarea { display: block; width: 100%; resize: vertical; color: inherit; }
 .gesture-guide { margin-top: 14px; }
 .gesture-guide svg, footer svg { width: 15px; height: 15px; }
 footer { padding-top: 29px; }
+footer a { color: inherit; text-underline-offset: 2px; }
+.privacy-title { font-size: clamp(2rem, 7vw, 3rem); }
+.privacy { line-height: 1.65; }
+.privacy p { margin: 5px 0 18px; }
+.privacy p:last-child { margin-bottom: 0; }
 .divider { opacity: .6; }
 dialog { width: min(100% - 28px, 420px); max-height: 90dvh; border-radius: 24px; padding: 17px; color: inherit; background: #f9fbfff2 !important; }
 dialog[open] { animation: enter .24s var(--ease) both; }
