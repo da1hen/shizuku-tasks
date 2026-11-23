@@ -12,8 +12,7 @@
     {
       "binding": "DB",
       "database_name": "shizuku-tasks",
-      // Replace the local placeholder with the UUID returned by d1 create before production deployment.
-      "database_id": "00000000-0000-4000-8000-000000000000"
+      "database_id": "9224cbd0-53c7-4aa3-9b28-f700ef433587"
     }
   ],
   "ai": { "binding": "AI" },
