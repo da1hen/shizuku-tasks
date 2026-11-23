@@ -1,0 +1,22 @@
+{
+  "name": "shizuku-tasks",
+  "version": "1.0.0",
+  "description": "Quick capture and swipe-based task manager",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "wrangler dev --local --ip localhost --port 8787",
+    "db:local": "wrangler d1 migrations apply DB --local",
+    "test": "node --test tests/worker.test.js",
+    "test:browser": "playwright test",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "jose": "^6.2.18"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "wrangler": "^4.166.0"
+  }
+}
